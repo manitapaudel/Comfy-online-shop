@@ -37,7 +37,7 @@ ul li {
  a {
     text-decoration: none;
  }
- .navbar .menu-toggle {
+ .navbar #menu-toggle {
     background-color: var(--clr-primary);
     border: none;
     color: white;
@@ -185,8 +185,7 @@ i {
     }
   }
   @media (min-width: 768px) {
-    .navbar .menu-toggle {
+    .navbar #menu-toggle {
         display: none;
     }
   }
-  
