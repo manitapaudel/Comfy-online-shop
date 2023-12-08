@@ -1,0 +1,132 @@
+:root { 
+    --clr-primary: hsl(21, 62%, 45%);
+    --clr-primary-1: hsl(21, 65%, 59%);
+}
+
+body {
+    margin: 0;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding: 0;
+}
+.nav-links a {
+    color: white; 
+}
+ul li {
+    margin: 0 3rem;
+}
+ a {
+    text-decoration: none;
+ }
+.cart {
+    border: 0;
+    background-color: transparent;
+}
+i {
+    font-size: 2rem;
+}
+/* Hero Section */
+.hero {
+    padding: 15rem 8rem;
+    color: white;
+    max-height: 100vh;
+    margin-top: -9rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("assets/hero-bg.jpeg")center/cover;
+    background-repeat: no-repeat;
+}
+.hero h1 {
+     font-family: 'Kaushan Script', cursive;
+     font-size: 5rem;
+     line-height: 2rem;
+     font-weight: 700;
+ }
+
+ .hero h2 {
+    font-size: 3rem;
+    font-weight: 300;
+ }
+
+ .hero-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+    padding: 0.6rem 0.85rem;
+    display: inline-block;
+    margin-top: 0.75rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    /* font-weight: bold; */
+}
+
+.hero-btn:hover {
+     cursor: pointer;
+     background-color: white;
+     color: var(--clr-primary);
+ }
+
+ /* Featured Section */
+ .featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 7rem;
+ }
+.featured h3 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+ #slash {
+    color: var(--clr-primary);
+ }
+
+#featured-products {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .footer {
+    padding: 1rem 0;
+    text-align: center;
+ }
+ .footer p {
+    margin: 0.25rem 0;
+ }
+
+ .all-products-btn {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--clr-primary);
+    padding: 0.6rem 2rem;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+ }
+
+ .all-products-btn:hover {
+    color: black;
+    background-color: hsl(21, 65%, 59%);
+    transition: all 1s ease-out;
+ }
