@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
 }
 
 .navbar ul {
@@ -86,7 +86,7 @@ i {
     justify-content: center;
     padding: 2rem 7rem;
  }
-.featured h3 {
+.featured h3, .history h3 {
     font-size: 3rem;
     font-weight: normal;
 }
@@ -129,4 +129,31 @@ i {
     color: black;
     background-color: hsl(21, 65%, 59%);
     transition: all 1s ease-out;
+ }
+
+ /* Products */
+ .route-hero {
+    padding: 1.5rem 10rem;
+    background-color: #F1F5F8;
+ }
+ .route-hero h2 {
+     color: #617D98;
+     font-weight: 500;
+     font-size: 2rem;
+     margin: 0;
+ }
+
+ .history {
+    padding: 4rem 10rem;
+    text-align: center;
+ }
+.history h3 {
+    margin: 1rem 0;
+}
+ .history p {
+    width: 50%;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #617D98;
  }
