@@ -3,6 +3,24 @@
 const shoppingCartIcon = document.getElementsByClassName("fa-shopping-cart")[0];
 shoppingCartIcon.style.color = "white";
 
+let isModalOpen = false;
+const navbar = document.querySelector(".navbar");
+const menuToggleBtn = document.querySelector("#menu-toggle");
+const modalMenu = document.querySelector("#modal-menu");
+const modalClose = document.querySelector("#modal-close");
+
+menuToggleBtn.addEventListener("click", () => {
+    console.log("Now, show the modal");
+    navbar.append(modalMenu);
+    isModalOpen = true;
+});
+
+modalClose.addEventListener("click", () => {
+    console.log("Now, remove the modal");
+    navbar.removeChild(modalMenu);
+    isModalOpen = false;
+});
+
 const data = [
     {
         imageSrc: "assets/hero-bg.jpeg",
@@ -52,7 +70,6 @@ data.map((datum) => {
     image.style.borderRadius = "4px"
 })
 
-// product.textContent = "Hi! Can you see me though?"
 
 async function getProducts() {
     const response = await fetch("https://course-api.com/javascript-store-products");
