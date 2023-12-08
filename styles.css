@@ -22,14 +22,27 @@ body {
     font-size: 1.5rem;
     padding: 0;
 }
+
 .nav-links a {
     color: white; 
 }
+
+.navbar a:hover {
+    color: var(--clr-primary);
+}
+
 ul li {
-    margin: 0 3rem;
+    margin: 0 2rem 0;
 }
  a {
     text-decoration: none;
+ }
+ .navbar .menu-toggle {
+    background-color: var(--clr-primary);
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
  }
 .cart {
     border: 0;
@@ -157,3 +170,23 @@ i {
     line-height: 2rem;
     color: #617D98;
  }
+/* Creating a responsive navbar */
+ @media (max-width: 992px) {
+    .navbar {
+        padding: 1rem 4rem;
+    }
+    ul li {
+        margin: 0 1rem 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .navbar .nav-links, .navbar .dark-nav-links {
+        display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .navbar .menu-toggle {
+        display: none;
+    }
+  }
+  
