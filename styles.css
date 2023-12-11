@@ -113,7 +113,6 @@ i {
     margin-top: 0.75rem;
     text-transform: uppercase;
     font-size: 1rem;
-    /* font-weight: bold; */
 }
 
 .hero-btn:hover {
@@ -195,7 +194,7 @@ i {
  }
 
  .history {
-    padding: 4rem 10rem;
+    padding: 4rem 8rem;
     text-align: center;
  }
 .history h3 {
@@ -236,6 +235,12 @@ i {
     .route-hero {
         padding: 0 5rem;
     }
+    .history {
+        padding: 4rem 5rem;
+    }
+    .history p {
+        width: 70%;
+    }
   }
   @media (max-width: 767px) {
     .navbar .nav-links, .navbar .dark-nav-links {
@@ -249,6 +254,15 @@ i {
     }
     .hero h2 {
         font-size: 2rem;
+    }
+    .featured h3, .history h3 {
+        font-size: 2.5rem;
+    }
+    .history {
+        padding: 4rem 2rem;
+    }
+    .history p {
+        width: 90%;
     }
   }
   @media (min-width: 767px) {
