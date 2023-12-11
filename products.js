@@ -9,13 +9,11 @@ if(!isModalOpen) {
 }
 
 menuToggleBtn.addEventListener("click", () => {
-    console.log("Now, show the modal");
     navbar.append(modalMenu);
     isModalOpen = true;
 });
 
 modalClose.addEventListener("click", () => {
-    console.log("Now, remove the modal");
     navbar.removeChild(modalMenu);
     isModalOpen = false;
 });
