@@ -127,7 +127,7 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 7rem;
+    padding: 2rem 6rem;
  }
 .featured h3, .history h3 {
     font-size: 3rem;
@@ -255,6 +255,9 @@ i {
     .hero h2 {
         font-size: 2rem;
     }
+    .featured {
+        padding: 2rem 5rem;
+    }
     .featured h3, .history h3 {
         font-size: 2.5rem;
     }
@@ -286,6 +289,9 @@ i {
     }
     .hero h2 {
         font-size: 1.5rem;
+    }
+    .featured {
+        padding: 2rem;
     }
     .route-hero {
         justify-content: center;
