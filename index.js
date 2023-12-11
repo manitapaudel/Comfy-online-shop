@@ -4,6 +4,7 @@ const shoppingCartIcon = document.getElementsByClassName("fa-shopping-cart")[0];
 shoppingCartIcon.style.color = "white";
 
 let isModalOpen = false;
+let isShowingProductIcons = false;
 const navbar = document.querySelector(".navbar");
 const menuToggleBtn = document.querySelector("#menu-toggle");
 const modalMenu = document.querySelector("#modal-menu");
@@ -24,55 +25,6 @@ modalClose.addEventListener("click", () => {
     isModalOpen = false;
 });
 
-const data = [
-    {
-        imageSrc: "assets/hero-bg.jpeg",
-        name: "High-Back Bench",
-        price: "$9.99"
-    },
-    {
-        imageSrc: "assets/hero-bg.jpeg",
-        name: "Utopia Sofa",
-        price: "$48.99"
-    }, 
-    {
-        imageSrc: "assets/hero-bg.jpeg",
-        name: "Entertainment Center",
-        price: "$18.99"
-    }
-]
-
-const featuredSection = document.getElementById("featured-products");
-
-data.map((datum) => {
-    const product = document.createElement("div");
-    const image = document.createElement("img");
-    const footer = document.createElement("div");
-    footer.className = "footer";
-    const productName = document.createElement("p");
-    productName.textContent = datum.name;
-    const productPrice = document.createElement("p");
-    productPrice.textContent = datum.price;
-    image.src = datum.imageSrc;
-    product.className = "product";
-    product.append(image);
-    footer.append(productName);
-    footer.append(productPrice);
-    product.append(footer);
-    featuredSection.append(product);
-    
-    // styling the texts
-    productName.style.color= "#617d98";
-    productName.style.fontSize= "1.3rem";
-    productPrice.style.fontSize= "1rem";
-    productPrice.style.fontWeight= "600";
-    
-    // styling the images
-    image.style.height = "13rem";
-    image.style.width = "22rem";
-    image.style.borderRadius = "4px"
-})
-
 async function getProducts() {
     try {
         const response = await fetch("https://course-api.com/javascript-store-products");
@@ -83,3 +35,65 @@ async function getProducts() {
     }
 }
 getProducts();
+
+const data = [
+    {
+        id: "1q",
+        imageSrc: "assets/hero-bg.jpeg",
+        name: "High-Back Bench",
+        price: "$9.99"
+    },
+    {
+        id: "2q",
+        imageSrc: "assets/hero-bg.jpeg",
+        name: "Utopia Sofa",
+        price: "$48.99"
+    }, 
+    {
+        id: "3q",
+        imageSrc: "assets/hero-bg.jpeg",
+        name: "Entertainment Center",
+        price: "$18.99"
+    }
+]
+
+const featuredSection = document.getElementById("featured-products");
+
+    featuredSection.innerHTML = 
+    data.map((product) => {
+        return `<div class="product">
+            <div class="product-image">
+                <img src= ${product.imageSrc} alt= ${product.name} />
+                <div class= "product-icons">
+                    <a href=${`product.html/?id=${product.id}`}>
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-details">
+                <p class="title">${product.name}</p>
+                <p class="price">${product.price}</p>
+            </div>
+        </div>`
+    })
+    const products = JSON.parse(localStorage.getItem("store"));
+    console.log("Hi i Yam", products);
+  
+// const productImages = document.querySelectorAll(".product-image");
+// const productIcons = document.querySelector(".product-icons");
+// console.log({productImages});
+
+// productImages.forEach((productImage) => { 
+//     productImage.addEventListener("mouseenter", () => {
+//     productImage.appendChild(productIcons);
+//     isShowingProductIcons = true;
+// })
+
+// productImage.addEventListener("mouseout", () => {
+//     productImage.removeChild(productIcons);
+//     isShowingProductIcons = false;
+// })
+// })
