@@ -65,7 +65,7 @@ const featuredSection = document.getElementById("featured-products");
             <div class="product-image">
                 <img src= ${product.imageSrc} alt= ${product.name} />
                 <div class= "product-icons">
-                    <a href=${`product.html/?id=${product.id}`}>
+                    <a href=${`product.html?id=${product.id}`}>
                         <i class="fas fa-search"></i>
                     </a>
                     <button>
