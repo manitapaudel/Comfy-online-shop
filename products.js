@@ -4,6 +4,8 @@ const menuToggleBtn = document.querySelector("#menu-toggle");
 const modalMenu = document.querySelector("#modal-menu");
 const modalClose = document.querySelector("#modal-close");
 
+const store = JSON.parse(localStorage.getItem("store"));
+
 if(!isModalOpen) {
     navbar.removeChild(modalMenu);
 }

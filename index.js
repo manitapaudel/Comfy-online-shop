@@ -74,12 +74,12 @@ data.map((datum) => {
 })
 
 async function getProducts() {
-    const response = await fetch("https://course-api.com/javascript-store-products");
-    const products = await response.json();
-    allProducts = products;
-    console.log(products);
-    return products;
+    try {
+        const response = await fetch("https://course-api.com/javascript-store-products");
+        const products = await response.json();
+        localStorage.setItem("store", JSON.stringify(products));
+    } catch (e) {
+        console.log(e);
+    }
 }
-// getProducts();
-// let allProducts = [];
-// console.log("Here", allProducts);
+getProducts();
