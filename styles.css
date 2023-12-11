@@ -141,7 +141,10 @@ i {
 
 #featured-products {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 5rem;
+    row-gap: 2rem;
+    align-items: center;
     width: 100%;
 }
  .product {
@@ -166,6 +169,7 @@ i {
     background-color: var(--clr-primary);
     padding: 0.6rem 2rem;
     border-radius: 0.2rem;
+    margin-top: 2rem;
     text-transform: uppercase;
  }
 
@@ -201,6 +205,14 @@ i {
     line-height: 2rem;
     color: #617D98;
  }
+
+ @media (max-width: 1250px) {
+    #featured-products {
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+ }
+
 /* Creating a responsive navbar */
  @media (max-width: 992px) {
     .navbar {
