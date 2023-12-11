@@ -9,14 +9,17 @@ const menuToggleBtn = document.querySelector("#menu-toggle");
 const modalMenu = document.querySelector("#modal-menu");
 const modalClose = document.querySelector("#modal-close");
 
+// To check if the status is true, especially on the page's first load
+if(!isModalOpen) {
+    navbar.removeChild(modalMenu);
+}
+
 menuToggleBtn.addEventListener("click", () => {
-    console.log("Now, show the modal");
     navbar.append(modalMenu);
     isModalOpen = true;
 });
 
 modalClose.addEventListener("click", () => {
-    console.log("Now, remove the modal");
     navbar.removeChild(modalMenu);
     isModalOpen = false;
 });
@@ -69,7 +72,6 @@ data.map((datum) => {
     image.style.width = "22rem";
     image.style.borderRadius = "4px"
 })
-
 
 async function getProducts() {
     const response = await fetch("https://course-api.com/javascript-store-products");

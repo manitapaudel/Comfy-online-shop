@@ -4,6 +4,10 @@ const menuToggleBtn = document.querySelector("#menu-toggle");
 const modalMenu = document.querySelector("#modal-menu");
 const modalClose = document.querySelector("#modal-close");
 
+if(!isModalOpen) {
+    navbar.removeChild(modalMenu);
+}
+
 menuToggleBtn.addEventListener("click", () => {
     console.log("Now, show the modal");
     navbar.append(modalMenu);
