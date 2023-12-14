@@ -190,6 +190,7 @@ i {
  .product .product-details .title {
     color: #617d98;
     font-size: 1.2rem;
+    text-transform: capitalize;
     margin: 0.5rem;
  }
  .product .product-details .price {
