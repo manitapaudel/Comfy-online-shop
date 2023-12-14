@@ -19,7 +19,8 @@ const displayProducts = (data, section) => {
                   <p class="price">$${product.fields.price / 100}</p>
               </div>
           </div>`;
-    });
+    }).join('');
   };
 
   export default displayProducts;
+  

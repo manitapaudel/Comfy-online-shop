@@ -1,6 +1,6 @@
-import fetchProducts from "./fetchProducts.js";
-import displayProducts from "./displayProducts.js";
-import "./toggleModalMenu.js";
+import fetchProducts from "./src/services/fetchProducts.js";
+import displayProducts from "./src/services/displayProducts.js";
+import "./src/services/toggleModalMenu.js";
 
 const shoppingCartIcon = document.getElementsByClassName("fa-shopping-cart")[0];
 shoppingCartIcon.style.color = "white";
