@@ -7,7 +7,7 @@ shoppingCartIcon.style.color = "white";
 
 const init = async () => {
   const products = await fetchProducts();
-  localStorage.setItem("products", products);
+  localStorage.setItem("products", JSON.stringify(products));
   const featuredSection = document.getElementById("featured-products");
   const featuredProducts = products.filter(
     (product) => product.fields.featured === true
