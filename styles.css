@@ -261,8 +261,30 @@ i {
  }
 
  .sidebar {
-    border: 2px solid green;
     grid-column: 1/4;
+ }
+ .sidebar .companies ul {
+    list-style-type: none;
+    padding: 0;
+ }
+ .sidebar .companies li {
+    margin: 1rem 0;
+ }
+ .sidebar .companies li button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.25rem;
+ }
+ .sidebar .companies li button:hover {
+    background-color: var(--clr-primary-1);
+    color: white;
  }
 #products-grid {
     display: grid;

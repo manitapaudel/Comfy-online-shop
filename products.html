@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Products | Comfy</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-         <!-- font-awesome -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-         <!-- styles -->
-        <link rel="stylesheet" href="styles.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Products | Comfy</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <body>
-        <body>
-            <nav class="navbar">
-                <ul class="dark-nav-links">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="products.html">Products</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                </ul>
-                <button id="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div id="modal-menu">
-                    <ul class="modal-links">
-                        <li>
-                            <a href="index.html"><i class="fas fa-home fa-fw"></i> Home</a>
-                        </li>
-                        <li>
-                            <a href="products.html"><i class="fas fa-couch fa-fw"></i> Products</a>
-                        </li>
-                        <li>
-                            <a href="about.html"><i class="fas fa-book fa-fw"></i> About</a>
-                        </li>
-                    </ul>
-                    <button id="modal-close"><i class="fas fa-times"></i></button>
-                </div>
-                <img src="assets/logo-black.svg" alt="comfy logo">
-                <div class="cart-container">
-                    <button class="cart"><i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </nav>
-            <section class="route-hero">
-                <h2>Home / Products</h2>
-            </section>
-            <main class="products-show">
-                <section class="sidebar">Hi, I am also here!</section>
-                <section id="products-grid">
-                </section>
-            </main>
-            <script type="module" src="src/pages/products.js" async defer></script>
-        </body>
+      <nav class="navbar">
+        <ul class="dark-nav-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+        <button id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="modal-menu">
+          <ul class="modal-links">
+            <li>
+              <a href="index.html"><i class="fas fa-home fa-fw"></i> Home</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-couch fa-fw"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-book fa-fw"></i> About</a>
+            </li>
+          </ul>
+          <button id="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <img src="assets/logo-black.svg" alt="comfy logo" />
+        <div class="cart-container">
+          <button class="cart"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </nav>
+      <section class="route-hero">
+        <h2>Home / Products</h2>
+      </section>
+      <main class="products-show">
+        <section class="sidebar">
+          <article class="companies">
+            <h2>Company</h2>
+            <ul id="companies-list"></ul>
+          </article>
+        </section>
+        <section id="products-grid"></section>
+      </main>
+      <script type="module" src="src/pages/products.js" async defer></script>
     </body>
+  </body>
 </html>
