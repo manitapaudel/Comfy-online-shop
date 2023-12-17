@@ -50,6 +50,7 @@
         <img src="assets/logo-black.svg" alt="comfy logo" />
         <div class="cart-container">
           <button class="cart"><i class="fas fa-shopping-cart"></i></button>
+          <span class="cart-count">0</span>
         </div>
       </nav>
       <section class="route-hero">
@@ -64,7 +65,14 @@
           <article class="price">
             <h2>Price</h2>
             <form class="price-range">
-              <input type="range" id="price" name="price" min="0" value="80" max="80">
+              <input
+                type="range"
+                id="price"
+                name="price"
+                min="0"
+                value="80"
+                max="80"
+              />
             </form>
             <p>Value : $<span id="price-value">80</span></p>
           </article>
