@@ -286,6 +286,9 @@ i {
     background-color: var(--clr-primary-1);
     color: white;
  }
+ .sidebar .price p {
+    color: #617d98;
+ }
 #products-grid {
     display: grid;
     grid-column: 4/7;
