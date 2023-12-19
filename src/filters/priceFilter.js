@@ -12,11 +12,11 @@ priceRangeInput.addEventListener("input", (e) => {
 });
 
 const filterByPrice = (price) => {
-  const products = getStorageItem("products");
+  const products = getStorageItem("store");
   const productsGrid = document.getElementById("products-grid");
 
   const filteredProducts = products.filter(
-    (product) => product.fields.price / 100 <= price
+    (product) => product.price / 100 <= price
   );
   displayProducts(filteredProducts, productsGrid);
 };

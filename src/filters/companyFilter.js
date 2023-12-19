@@ -4,7 +4,7 @@ import { getStorageItem } from "../services/utils.js";
 const companies = ["all", "ikea", "marcos", "caressa", "liddy"];
 
 const displayCompaniesFilter = () => {
-  const products = getStorageItem("products");
+  const products = getStorageItem("store");
   const sidebarCompanies = document.getElementById("companies-list");
   sidebarCompanies.innerHTML = companies
     .map((company) => {
@@ -32,7 +32,7 @@ const filterByCompany = (products) => {
         filteredList = products;
       } else {
         filteredList = products.filter(
-          (product) => product.fields.company === companyName
+          (product) => product.company === companyName
         );
       }console.log({filteredList});
       displayProducts(filteredList, productsGrid);

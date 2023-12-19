@@ -1,6 +1,6 @@
 import fetchProducts from "./src/services/fetchProducts.js";
 import displayProducts from "./src/services/displayProducts.js";
-import { setStorageItem } from "./src/services/utils.js";
+import setupStore from "./src/services/setupStore.js";
 import "./src/services/toggleModalMenu.js";
 import "./src/services/toggleCartModal.js";
 
@@ -9,7 +9,7 @@ shoppingCartIcon.style.color = "white";
 
 const init = async () => {
   const products = await fetchProducts();
-  setStorageItem("products", products);
+  setupStore(products);
   const featuredSection = document.getElementById("featured-products");
   const featuredProducts = products.filter(
     (product) => product.fields.featured === true
