@@ -8,7 +8,6 @@ import "../services/toggleCartModal.js";
 const init = () => { 
     const allProducts = getStorageItem("store");
     const productsGrid = document.getElementById("products-grid");
-    console.log("Here!", allProducts);
     displayProducts(allProducts, productsGrid);
     displayCompaniesFilter();
 }

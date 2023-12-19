@@ -23,7 +23,6 @@ const filterByCompany = (products) => {
 
   // check for the outerText and filter the specific company's products
   sidebarCompanies.addEventListener("click", (e) => {
-    console.log("y?", e)
     const element = e.target;
     if (element.className === "company-btn") {
       let filteredList = [];
@@ -34,7 +33,7 @@ const filterByCompany = (products) => {
         filteredList = products.filter(
           (product) => product.company === companyName
         );
-      }console.log({filteredList});
+      }
       displayProducts(filteredList, productsGrid);
     }
   });

@@ -6,7 +6,6 @@ const priceValue = document.getElementById("price-value");
 
 priceRangeInput.addEventListener("input", (e) => {
   const element = e.target;
-  console.log("y tho", element.value);
   priceValue.textContent = element.value;
   filterByPrice(element.value);
 });
