@@ -1,3 +1,5 @@
+import "./toggleCartModal.js";
+
 const displayProducts = (data, section) => {
     section.innerHTML = data.map((product) => {
       return `<div class="product">
@@ -9,7 +11,7 @@ const displayProducts = (data, section) => {
                       <a href=${`product.html?id=${product.id}`}>
                           <i class="fas fa-search"></i>
                       </a>
-                      <button>
+                      <button class="cart" id="add-to-cart-btn">
                           <i class="fas fa-shopping-cart"></i>
                       </button>
                   </div>
