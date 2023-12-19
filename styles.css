@@ -80,6 +80,7 @@ ul li {
 .cart {
     border: 0;
     background-color: transparent;
+    cursor: pointer;
 }
 i {
     font-size: 2rem;
@@ -93,6 +94,45 @@ i {
     font-size: 1rem;
     border-radius: 50%;
     padding: 0.3rem 0.6rem;
+}
+.navbar .cart-modal-overlay.show {
+    z-index: 5;
+    opacity: 1;
+}
+.navbar .cart-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.show #cart-modal {
+    transform: translateX(0);
+}
+ #cart-modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 23vw;
+    background-color: white;
+    padding: 3rem 1rem;
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+}
+#cart-close {
+    background-color: transparent;
+    border: none;
+    color: #617D98;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
 }
 /* Hero Section */
 .hero {
