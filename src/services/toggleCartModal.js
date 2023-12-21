@@ -13,3 +13,7 @@ cartButtons.forEach((cartButton) =>{
 closeCart.addEventListener("click", () => {
   cartModalOverlay.classList.remove("show");
 });
+
+const openCartModal = () => {
+  cartModalOverlay.classList.add("show");
+}
