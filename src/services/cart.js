@@ -1,3 +1,4 @@
+import displayCartCount from "./store/CartItemCount.js";
 import findStoreItem from "./store/findStoreItem.js";
 import { openCartModal } from "./toggleCartModal.js";
 import { getStorageItem, setStorageItem } from "./utils.js";
@@ -20,6 +21,7 @@ const addToCart = (id) => {
     console.log(id, "found in the cart");
   }
   setStorageItem("cart", cart);
+  displayCartCount();
   openCartModal();
 };
 

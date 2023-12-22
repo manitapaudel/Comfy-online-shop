@@ -4,6 +4,7 @@ import setupStore from "./src/services/store/setupStore.js";
 import { getStorageItem } from "./src/services/utils.js";
 import "./src/services/toggleModalMenu.js";
 import "./src/services/toggleCartModal.js";
+import displayCartCount from "./src/services/store/CartItemCount.js";
 
 const shoppingCartIcon = document.getElementsByClassName("fa-shopping-cart")[0];
 shoppingCartIcon.style.color = "white";
@@ -17,6 +18,7 @@ const init = async () => {
     (product) => product.featured === true
   );
   displayProducts(featuredProducts, featuredSection);
+  displayCartCount();
 };
 
 window.addEventListener("DOMContentLoaded", init);
