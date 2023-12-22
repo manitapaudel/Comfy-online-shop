@@ -1,3 +1,5 @@
+import { displayTotal } from "./cartTotal.js";
+
 const cartButtons = document.querySelectorAll(".cart");
 const cartModalOverlay = document.querySelector(".cart-modal-overlay");
 const closeCart = document.querySelector("#cart-close");
@@ -8,6 +10,7 @@ cartButtons.forEach((cartButton) =>{
     cartModalOverlay.classList.add("show");
     console.log("is it working??");
   })
+  displayTotal();
 });
 
 closeCart.addEventListener("click", () => {
@@ -16,4 +19,5 @@ closeCart.addEventListener("click", () => {
 
 export const openCartModal = () => {
   cartModalOverlay.classList.add("show");
+  displayTotal();
 }
