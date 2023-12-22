@@ -14,6 +14,6 @@ closeCart.addEventListener("click", () => {
   cartModalOverlay.classList.remove("show");
 });
 
-const openCartModal = () => {
+export const openCartModal = () => {
   cartModalOverlay.classList.add("show");
 }

@@ -1,6 +1,6 @@
 import fetchProducts from "./src/services/fetchProducts.js";
 import displayProducts from "./src/services/displayProducts.js";
-import setupStore from "./src/services/setupStore.js";
+import setupStore from "./src/services/store/setupStore.js";
 import { getStorageItem } from "./src/services/utils.js";
 import "./src/services/toggleModalMenu.js";
 import "./src/services/toggleCartModal.js";

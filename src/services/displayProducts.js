@@ -1,3 +1,4 @@
+import { addToCart } from "./cart.js";
 import "./toggleCartModal.js";
 
 const displayProducts = (data, section) => {
@@ -11,7 +12,7 @@ const displayProducts = (data, section) => {
                       <a href=${`product.html?id=${product.id}`}>
                           <i class="fas fa-search"></i>
                       </a>
-                      <button class="cart" id="add-to-cart-btn">
+                      <button class="cart add-to-cart-btn" data-id="${product.id}" >
                           <i class="fas fa-shopping-cart"></i>
                       </button>
                   </div>
@@ -22,6 +23,16 @@ const displayProducts = (data, section) => {
               </div>
           </div>`;
     }).join('');
+
+    const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
+    console.log("why", addToCartBtn);
+
+    section.addEventListener('click', function (e) {
+        const parent = e.target.parentElement;
+        if(parent.classList.contains('add-to-cart-btn')) {
+            addToCart( parent.dataset.id);
+        }
+      });
   };
 
   export default displayProducts;
