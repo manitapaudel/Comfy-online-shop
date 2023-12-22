@@ -1,5 +1,5 @@
-import { addToCart } from "./cart.js";
-import "./toggleCartModal.js";
+import { addToCart } from "../cart/cart.js";
+import "../cart/toggleCartModal.js";
 
 const displayProducts = (data, section) => {
     section.innerHTML = data.map((product) => {

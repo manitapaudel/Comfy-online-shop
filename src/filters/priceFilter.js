@@ -1,4 +1,4 @@
-import displayProducts from "../services/displayProducts.js";
+import displayProducts from "../services/products/displayProducts.js";
 import { getStorageItem } from "../services/utils.js";
 
 const priceRangeInput = document.getElementById("price");

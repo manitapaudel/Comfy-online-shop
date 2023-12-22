@@ -1,7 +1,7 @@
-import displayCartCount from "./store/CartItemCount.js";
-import findStoreItem from "./store/findStoreItem.js";
+import displayCartCount from "./cartItemCount.js";
+import findStoreItem from "../store/findStoreItem.js";
 import { openCartModal } from "./toggleCartModal.js";
-import { getStorageItem, setStorageItem } from "./utils.js";
+import { getStorageItem, setStorageItem } from "../utils.js";
 
 const store = getStorageItem("store");
 let cart = getStorageItem("cart");

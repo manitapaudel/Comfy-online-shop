@@ -1,4 +1,4 @@
-import { allProductsURL } from "./utils.js";
+import { allProductsURL } from "../utils.js";
 
 const fetchProducts = async () => {
     try {

@@ -1,10 +1,10 @@
-import fetchProducts from "./src/services/fetchProducts.js";
-import displayProducts from "./src/services/displayProducts.js";
+import displayCartCount from "./src/services/cart/cartItemCount.js";
+import fetchProducts from "./src/services/products/fetchProducts.js";
+import displayProducts from "./src/services/products/displayProducts.js";
 import setupStore from "./src/services/store/setupStore.js";
 import { getStorageItem } from "./src/services/utils.js";
 import "./src/services/toggleModalMenu.js";
-import "./src/services/toggleCartModal.js";
-import displayCartCount from "./src/services/store/CartItemCount.js";
+import "./src/services/cart/toggleCartModal.js";
 
 const shoppingCartIcon = document.getElementsByClassName("fa-shopping-cart")[0];
 shoppingCartIcon.style.color = "white";

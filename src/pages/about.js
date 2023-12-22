@@ -1,5 +1,5 @@
-import displayCartCount from "../services/store/CartItemCount.js";
+import displayCartCount from "../services/cart/cartItemCount.js";
 import "../services/toggleModalMenu.js";
-import "../services/toggleCartModal.js";
+import "../services/cart/toggleCartModal.js";
 
 displayCartCount();

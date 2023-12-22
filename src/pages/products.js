@@ -1,10 +1,10 @@
-import displayCartCount from "../services/store/CartItemCount.js";
+import displayCartCount from "../services/cart/cartItemCount.js";
 import { getStorageItem } from "../services/utils.js";
-import displayProducts from "../services/displayProducts.js";
+import displayProducts from "../services/products/displayProducts.js";
 import displayCompaniesFilter from "../filters/companyFilter.js";
 import "../filters/priceFilter.js";
 import "../services/toggleModalMenu.js";
-import "../services/toggleCartModal.js";
+import "../services/cart/toggleCartModal.js";
 
 const init = () => {
   const allProducts = getStorageItem("store");
