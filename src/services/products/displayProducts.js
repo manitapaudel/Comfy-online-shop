@@ -24,8 +24,6 @@ const displayProducts = (data, section) => {
           </div>`;
     }).join('');
 
-    const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
-
     section.addEventListener('click', function (e) {
         const parent = e.target.parentElement;
         if(parent.classList.contains('add-to-cart-btn')) {
