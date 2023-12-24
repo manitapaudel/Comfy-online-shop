@@ -1,4 +1,5 @@
 import { displayTotal } from "./cartTotal.js";
+import displayCartItems from "./displayCartItems.js";
 
 const cartButtons = document.querySelectorAll(".cart");
 const cartModalOverlay = document.querySelector(".cart-modal-overlay");
@@ -19,5 +20,6 @@ closeCart.addEventListener("click", () => {
 
 export const openCartModal = () => {
   cartModalOverlay.classList.add("show");
+  displayCartItems();
   displayTotal();
 }

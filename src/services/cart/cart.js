@@ -2,6 +2,7 @@ import displayCartCount from "./cartItemCount.js";
 import findStoreItem from "../store/findStoreItem.js";
 import { openCartModal } from "./toggleCartModal.js";
 import { getStorageItem, setStorageItem } from "../utils.js";
+import displayCartItems from "./displayCartItems.js";
 
 const store = getStorageItem("store");
 let cart = getStorageItem("cart");
@@ -20,8 +21,10 @@ const addToCart = (id) => {
     console.log("index", index);
     console.log(id, "found in the cart");
   }
+  
   setStorageItem("cart", cart);
   displayCartCount();
+  displayCartItems();
   openCartModal();
 };
 
