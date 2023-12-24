@@ -14,4 +14,5 @@ const displayCartCount = () => {
     const count = cartItemCount();
     cartCount.innerText = count;
 }
+
 export default displayCartCount;

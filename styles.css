@@ -166,7 +166,6 @@ i {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  /* justify-content: start; */
 }
 
 .cart-items .item-info p {
@@ -182,7 +181,7 @@ i {
 .cart-items .item-info p #price {
   color: #324d67;
 }
-.cart-items #remove-item {
+.cart-items .remove-item {
   color: #617d98;
   text-align: justify;
   padding: 0;
