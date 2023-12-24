@@ -11,7 +11,7 @@ const displayCartItems = () => {
                 <div class="item-info">
                     <p>
                         <span id="name">${item.name}</span>
-                        <span id="price">${item.price}</span>
+                        <span id="price">$${item.price/100}</span>
                     </p>
                     <button id="remove-item">remove</button>
                 </div>
