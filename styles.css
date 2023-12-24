@@ -154,6 +154,7 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  margin-bottom: 1.5rem;
 }
 .cart-items .cart-item img {
   width: 75px;
@@ -163,6 +164,7 @@ i {
 .cart-items .item-info {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   /* justify-content: start; */
 }
 
@@ -170,7 +172,11 @@ i {
   display: flex;
   flex-direction: column;
   margin: 0;
-  color: #102A42;
+}
+.cart-items .item-info p #name {
+  text-transform: capitalize;
+  color: #102a42;
+  margin-bottom: 6px;
 }
 .cart-items #remove-item {
   text-align: justify;
