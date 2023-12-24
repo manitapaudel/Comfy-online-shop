@@ -22,7 +22,6 @@ const displayCartItems = () => {
                 </div>
             </div>`
   }).join("");
-  console.log("I am actually here!");
 };
 
 export default displayCartItems;
