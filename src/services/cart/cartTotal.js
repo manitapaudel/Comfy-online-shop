@@ -11,7 +11,7 @@ const cartTotal = () => {
 
 const displayTotal = () => {
     const totalPrice = document.querySelector(".total-price");
-    totalPrice.innerText = `$${cartTotal()}`;
+    totalPrice.innerText = `$${cartTotal().toFixed(2)}`;
 }
 
 export { displayTotal };
