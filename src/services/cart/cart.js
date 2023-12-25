@@ -25,12 +25,4 @@ const addToCart = (id) => {
   openCartModal();
 };
 
-const increaseItemCount = (id) => {
-  let currentItem = cart.find((item) => item.id === id);
-  // let item = findStoreItem(id);
-  currentItem = { ...currentItem, amount: currentItem.amount + 1 }
-  cart = [...cart, currentItem];
-  setStorageItem("cart", cart);
-};
-
-export { addToCart, increaseItemCount };
+export { addToCart };

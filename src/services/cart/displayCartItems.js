@@ -1,9 +1,10 @@
 import { getStorageItem } from "../utils.js";
-import { addToCart, increaseItemCount } from "./cart.js";
+import { addToCart } from "./cart.js";
 
-const cart = getStorageItem("cart");
+const cartItems = document.querySelector(".cart-items");
 
 const displayCartItems = () => {
+  const cart = getStorageItem("cart");
   const cartItems = document.querySelector(".cart-items");
 
   cartItems.innerHTML = cart
@@ -23,7 +24,9 @@ const displayCartItems = () => {
                     <button class="add-one" data-id="${
                       item.id
                     }"><i class="fas fa-chevron-up"></i></button>
-                    <span id="item-count" >${item.amount}</span>
+                    <span id="item-count" data-id="${item.id}" >${
+        item.amount
+      }</span>
                     <button class="remove-one" data-id="${
                       item.id
                     }"><i class="fas fa-chevron-down"></i></button>
@@ -31,21 +34,22 @@ const displayCartItems = () => {
             </div>`;
     })
     .join("");
-
-    cartItems.addEventListener("click", (e) => {
-        let parent = e.target.parentElement;
-        if(parent.classList.contains("add-one")) {
-            console.log(e);
-            addToCart(parent.dataset.id);
-        }
-    })
 };
 
+cartItems.addEventListener("click", (e) => {
+  let parent = e.target.parentElement;
+  if (parent.classList.contains("add-one")) {
+    addToCart(parent.dataset.id);
+  }
+});
+
 export const displayCartItemsCount = (id) => {
-    const itemCount = document.querySelector("#item-count");
-    const currentItem = cart.find((item) => item.id === id);
+  const cart = getStorageItem("cart");
+  const itemCount = document.querySelector("#item-count");
+  const currentItem = cart.find((item) => item.id === id);
+  if (itemCount.dataset.id === id) {
     itemCount.innerText = currentItem.amount;
-    console.log("called!");
-}
+  }
+};
 
 export default displayCartItems;
