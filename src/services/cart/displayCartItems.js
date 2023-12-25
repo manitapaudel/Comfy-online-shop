@@ -1,5 +1,5 @@
 import { getStorageItem } from "../utils.js";
-import { addToCart } from "./cart.js";
+import { addToCart, decreaseOneItem, removeFromCart } from "./cart.js";
 
 const cartItems = document.querySelector(".cart-items");
 
@@ -43,11 +43,25 @@ cartItems.addEventListener("click", (e) => {
   }
 });
 
+cartItems.addEventListener("click", (e) => {
+  let parent = e.target.parentElement;
+  if (parent.classList.contains("remove-one")) {
+    decreaseOneItem(parent.dataset.id);
+  }
+});
+
+cartItems.addEventListener("click", (e) => {
+  let element = e.target;
+  if (element.classList.contains("remove-item")) {
+    removeFromCart(element.dataset.id);
+  }
+});
+
 export const displayCartItemsCount = (id) => {
   const cart = getStorageItem("cart");
   const itemCount = document.querySelector("#item-count");
   const currentItem = cart.find((item) => item.id === id);
-  if (itemCount.dataset.id === id) {
+  if ( currentItem && itemCount.dataset.id === id) {
     itemCount.innerText = currentItem.amount;
   }
 };
