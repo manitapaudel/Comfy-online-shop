@@ -460,6 +460,9 @@ i {
   #products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  #cart-modal {
+    width: 30vw;
+  }
 }
 /* Creating a responsive navbar */
 @media (max-width: 992px) {
@@ -498,6 +501,9 @@ i {
   #products-grid {
     grid-column: 1/6;
   }
+  #cart-modal {
+    width: 40vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -533,6 +539,9 @@ i {
   #products-grid .product .product-image img {
     width: 90%;
   }
+  #cart-modal {
+    width: 52vw;
+  }
 }
 @media (min-width: 767px) {
   .navbar #menu-toggle {
@@ -561,5 +570,8 @@ i {
   }
   .route-hero {
     justify-content: center;
+  }
+  #cart-modal {
+    width: 95vw;
   }
 }
