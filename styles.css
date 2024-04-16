@@ -143,6 +143,10 @@ i {
 }
 #cart-modal .cart-items {
   min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .checkout-btn {
   width: 75%;
@@ -155,6 +159,7 @@ i {
   grid-template-columns: 1fr 2fr 1fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  max-width: 350px;
 }
 .cart-items .cart-item img {
   width: 75px;
