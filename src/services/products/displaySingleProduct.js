@@ -1,23 +1,16 @@
 const displaySingleProduct = (product, element) => {
-  element.innerHTML = `<div class="product">
+  element.innerHTML = `
                 <div class="product-image">
                     <img src= ${product.image} alt= ${product.name} />
-                    <div class= "product-icons">
-                        <a href=${`product.html?id=${product.id}`}>
-                            <i class="fas fa-search"></i>
-                        </a>
-                        <button class="cart add-to-cart-btn" data-id="${
-                          product.id
-                        }" >
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
                 </div>
                 <div class="product-details">
                     <p class="title">${product.name}</p>
+                    <p class="company">By ${product.company.toUpperCase()}</p>
                     <p class="price">$${product.price / 100}</p>
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam iusto eum voluptatem tenetur sunt dolor at ullam suscipit vel amet.</p>
+                    <button>Add to Cart</button>
                 </div>
-            </div>`;
+            `;
 };
 
 export default displaySingleProduct;

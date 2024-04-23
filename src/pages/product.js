@@ -8,6 +8,7 @@ const init = () => {
   const allProducts = getStorageItem("store");
   const productsGrid = document.getElementById("products-grid");
   const singleProduct = document.getElementById("single-product");
+  const breadcrumb = document.getElementById("breadcrumb");
   const searchParams = new URLSearchParams(window.location.search);
   const currentId = searchParams.get("id");
 
@@ -16,6 +17,7 @@ const init = () => {
   );
   displayCartCount(currentProduct, productsGrid);
   displaySingleProduct(currentProduct, singleProduct);
+  breadcrumb.innerText += ` / ${currentProduct.name}`;
 };
 
 init();
