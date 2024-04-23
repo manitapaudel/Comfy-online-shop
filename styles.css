@@ -557,6 +557,11 @@ i {
   font-size: 16px;
 }
 
+.product-details .add-to-cart-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
 @media (max-width: 767px) {
   .navbar .nav-links,
   .navbar .dark-nav-links {
