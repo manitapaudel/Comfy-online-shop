@@ -280,7 +280,6 @@ i {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 #featured-products .product .product-image img {
@@ -606,9 +605,11 @@ i {
   }
   #products-grid {
     grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
   }
   #products-grid .product .product-image img {
-    width: 90%;
+    width: 100%;
+    height: 15rem;
   }
   #cart-modal {
     width: 52vw;
@@ -653,6 +654,9 @@ i {
   }
   #cart-modal {
     width: 95vw;
+  }
+  .products-show {
+    padding: 4rem 2rem;
   }
   #single-product {
     padding: 4rem 2rem;
