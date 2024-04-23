@@ -574,6 +574,10 @@ i {
   #single-product .product-details .title {
     font-size: 35px;
   }
+  #companies-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 767px) {
