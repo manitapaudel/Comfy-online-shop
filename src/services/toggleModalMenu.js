@@ -4,18 +4,19 @@ const navbar = document.querySelector(".navbar");
 const menuToggleBtn = document.querySelector("#menu-toggle");
 const modalMenu = document.querySelector("#modal-menu");
 const modalClose = document.querySelector("#modal-close");
+const menuModalOverlay = document.querySelector(".modal-menu-overlay");
 
 // To check if the status is true, especially on the page's first load
-if(!isModalOpen) {
-    navbar.removeChild(modalMenu);
+if (!isModalOpen) {
+  menuModalOverlay.classList.remove("show");
 }
 
 menuToggleBtn.addEventListener("click", () => {
-    navbar.append(modalMenu);
-    isModalOpen = true;
+  menuModalOverlay.classList.add("show");
+  isModalOpen = true;
 });
 
 modalClose.addEventListener("click", () => {
-    navbar.removeChild(modalMenu);
-    isModalOpen = false;
+  menuModalOverlay.classList.remove("show");
+  isModalOpen = false;
 });
