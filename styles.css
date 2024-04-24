@@ -27,6 +27,10 @@ body {
   color: white;
 }
 
+.dark-nav-links a {
+  color: #102a42;
+}
+
 .navbar a:hover {
   color: var(--clr-primary);
 }
@@ -44,17 +48,33 @@ a {
   border-radius: 2rem;
   padding: 0.5rem 1rem;
 }
+.navbar .modal-menu-overlay.show {
+  z-index: 5;
+  opacity: 1;
+}
+.navbar .modal-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .navbar #modal-menu {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   background-color: white;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 6px;
 }
 .navbar .modal-links {
   display: flex;
@@ -66,6 +86,9 @@ a {
 .navbar .modal-links li {
   font-size: 1.5rem;
   margin: 1rem 0;
+}
+.navbar .modal-links a {
+  color: #102a42;
 }
 .navbar .modal-links i {
   font-size: 1.5rem;
@@ -146,7 +169,6 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .checkout-btn {
   width: 75%;
