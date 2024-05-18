@@ -1,4 +1,5 @@
-# Comfy-online-shop
+<h1 align="center"> 🛒 Comfy-online-shop </h1>
+
 > A simple online shop created with HTML, CSS and JavaScript, which is responsive by design. >>>> https://comfy-online-shop.vercel.app/
 
 > You can view the products list, filter them by price range, company names, and view their details, by going to their individual pages. You can also:
